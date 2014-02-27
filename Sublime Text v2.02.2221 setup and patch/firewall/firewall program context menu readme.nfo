@@ -1,0 +1,52 @@
+﻿
+                                              ~═≡≡■≡≡═~
+
+         ╔═════════════════════════════════════════════════════════════════════════════════╗
+      ~═≡╬≡═~                     .:Firewall Program Context Menu:.                     ~═≡╬≡═~     
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+         │                                                                                 │
+         |                                                                                 |
+         !     run 'firewall program context menu' vbscript to install or uninstall        !
+               right click context menu network management for executable files through
+               windows firewall rules. it is necessary to run the vbs installer as an
+               administrator. you will be able to right click any executable file and
+               choose the context menu option firewall program block or allow to manage
+               the program's access to the internet. allow will delete the program from
+               windows firewall with advanced security, block will add the program for
+               all profiles, for any protocol, for any ip address, and for any port.
+
+               the vbs installer will write 'firewall program allow.bat' and 'firewall
+               program block.bat' files to the 'c:\windows' folder, those files will
+               write two more files to the windows '%temp%' folder when they are used:
+               'firewall program allow.vbs' and 'firewall program block.vbs'. those
+               temporary folder vbscript files finally write 'firewall allow
+               program.bat' and 'firewall block program.bat' and run the batch scripts
+               through their context menu option 'Run as administrator'. the final
+               temporary folder batch scripts use 'netsh advfirewall firewall add' or
+               'netsh advfirewall firewall delete' to apply firewall rules for the
+         ¡     selected program.                                                           ¡
+         |                                                                                 |
+         │                                                                                 │
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+      ~═≡╬≡═~                                 .:About:.                                 ~═≡╬≡═~     
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+         │                                                                                 │
+         |                                                                                 |
+         !                      Release Date......: 12/14/2012                             !
+                                Uploader..........: un0n1m0s
+                                Upstream Rate.....: 90kbps
+                                Availability......: 24/7 to new version
+                                Operating System..: windows x86 x64
+                                Content Type......: computer script
+                                Program Type......: firewall management
+                                Script Editor.....: sublime text 2
+                                NFO Editor........: notepad, nfopad
+                                NFO Font..........: courier new, reg, 8
+         ¡                      NFO Encoding......: utf-8                                  ¡
+         |                                                                                 |
+         │                                                                                 │
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+      ~═≡╬≡═~                                .:1n0n1m0s:.                               ~═≡╬≡═~     
+         ╚═════════════════════════════════════════════════════════════════════════════════╝
+
+                                              ~═≡≡■≡≡═~

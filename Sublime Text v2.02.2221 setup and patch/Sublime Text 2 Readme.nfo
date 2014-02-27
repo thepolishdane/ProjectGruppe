@@ -1,0 +1,107 @@
+﻿
+                                              ~═≡≡■≡≡═~
+
+         ╔═════════════════════════════════════════════════════════════════════════════════╗
+      ~═≡╬≡═~                             .:Sublime Text 2:.                            ~═≡╬≡═~     
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+         │                                                                                 │
+         |                                                                                 |
+         !     Sublime Text is a sophisticated text editor for code, markup and prose.     !
+               You'll love the slick user interface, extraordinary features and
+               amazing performance. Sublime Text is full to the brim with editing
+               features.  Sublime Text is a very extensible and customizable editor.
+               It does many things out of the box, but if you spend some time
+               tailoring it to your exact needs, it will give you superpowers.
+      
+               Normal installations separate data between two folders: the installation
+               folder proper, and the data directory. Normal installations also
+               integrate Sublime Text with the Windows context menu. Portable
+               installations will keep all files Sublime Text needs to run in one
+               single folder. You can then move this folder around and the editor will
+         ¡     still work.                                                                 ¡
+         |                                                                                 |
+         │                                                                                 │
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+      ~═≡╬≡═~                              .:Application:.                              ~═≡╬≡═~     
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+         │                                                                                 │
+         |                                                                                 |
+         !     Crack                                                                       !
+               copy crack file sublime_text.exe to installed program folder and replace
+               original file. crack or restore batch file will automatically back up
+               original file and copy crack to default installation folder.
+               runasadmin registry settings are added and program will start as
+               registered. 'Registered to' changed to 'Registered'. original file is
+               restored if already cracked with a backup file.
+
+               Patch
+               run batch file 'Sublime Text x86 x64 Patch runasadmin' located in the
+               hexpatch folder. the batch file will backup original file and use
+               HexPatcher.exe to seek and replace registration byte patterns, program
+               will start when done. 'Registered to' changed to 'Registered'.
+
+               patch note:  hexpatcher.exe was downloaded from sourceforge.net
+
+               Firewall
+               program internet access can be blocked with the 'firewall program
+               context menu' vbscript.
+
+         ¡     sublime text context menu batch file must be in same folder as program.     ¡
+         |                                                                                 |
+         │                                                                                 │
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+      ~═≡╬≡═~                              .:Patch Notes:.                              ~═≡╬≡═~     
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+         │                                                                                 │
+         |                                                                                 |
+         !           32-bit Patches (Ollydebug)                                            !
+                     Address  Size  State   Old        New
+                     0049C775  2.   Active  MOV AL,BL  INC AL
+
+                     search                         replace
+                     8AC35B64890D0000000081C480     FEC05B64890D0000000081C480
+                     5265676973746572656420746F20   5265676973746572656400000000
+
+
+                     64-bit Patches (PE Browse)
+                     old hex  0x400FA55A: 8AC3   MOV   AL,BL 
+                     new hex  0x400FA55A: FEC0   INC   AL
+
+                     search                         replace
+                     8AC34C8D9C24E0                 FEC04C8D9C24E0
+                     5265676973746572656420746F20   5265676973746572656400000000
+
+         ¡           'Registered to' changed to 'Registered'                               ¡
+         |                                                                                 |
+         │                                                                                 │
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+      ~═≡╬≡═~                                 .:About:.                                 ~═≡╬≡═~     
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+         │                                                                                 │
+         |                                                                                 |
+         !                      Release Date......: 2013/08/04                             !
+                                Uploader..........: 1n0n1m0s
+                                Upstream Rate.....: 90kbps
+                                Availability......: 24/7 to new version
+                                Operating System..: windows x86 x64
+                                Content Type......: computer software
+                                Program Type......: script editor
+                                Crack Editor......: ollydebug
+                                Patch Editor......: hexpatcher
+                                Patch Type........: crack
+                                Patch Type........: seek and replace patch
+                                Image Editor......: photoshop elements 7 esd
+                                Icon Editor.......: icofx
+                                Batch Editor......: sublime text
+                                NFO Editor........: notepad, nfopad
+                                NFO Font..........: courier new, reg, 8
+                                NFO Encoding......: utf-8
+                                Monitor Resolution: 1920x1080
+         ¡                      Text Size (DPI)...: 125%                                   ¡
+         |                                                                                 |
+         │                                                                                 │
+         ╠─────────────────────────────────────────────────────────────────────────────────╣
+      ~═≡╬≡═~                                .:1n0n1m0s:.                               ~═≡╬≡═~     
+         ╚═════════════════════════════════════════════════════════════════════════════════╝
+
+                                              ~═≡≡■≡≡═~
