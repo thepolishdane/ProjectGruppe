@@ -4,13 +4,13 @@
         <title>Liga system</title>
     </head>
     <body>
-    	<table border=1 style="float:left; width:33%;">
-    		<tr>
-    			<td>
-    				Tilmeld Liga
-    			</td>
+        <table border=1 style="float:left; width:33%;">
+            <tr>
+                <td>
+                    Tilmeld Liga
+                </td>
 
-    		</tr>
+            </tr>
             <tr>
                 <td>
                     <?php 
@@ -18,7 +18,7 @@
                     ?>
                 </td>
             </tr>
-    	</table>
+        </table>
         <table border=1 style="float:left; width:33%;">
             <tr>
                 <td>
@@ -33,20 +33,58 @@
                 </td>
             </tr>
         </table>
+        <form method="">
         <table border=1 style="float:left; width:33%;">
             <tr>
 
                 <td>
-                    Ligaer
+                    Opret Liga
                 </td>
             </tr>
             <tr>
                 <td>
-                    <?php 
-
-                    ?>
+                    Liga Navn:
+                </td>
+                <td>
+                    <input type="text" name="liganavn">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Længde:
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Spil:
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset" value="Reset">
+                </td>
+                <td>
+                    <button type="button" name="opret">Opret Liga</button>
                 </td>
             </tr>
         </table>
+        <?php
+        if(isset ($_POST['opret'])){
+            $liga_navn = $_POST['liganavn'];
+
+            $mysql = "INSERT INTO WP_liga_navn VALUES ".$liga_navn;
+            $wpdb->query($mysql);
+
+        }
+
+
+        ?>
+    </form>
     </body>
 </html>
