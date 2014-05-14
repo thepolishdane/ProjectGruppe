@@ -2,7 +2,23 @@
 /**
 *Template Name: test Template
 */
+<?php
+$name = $_POST[liganavn];
+$length = $_POST[ligalenght];
+$game = $_POST[game];
 
+
+if (isset($_POST['submit'])) {
+
+    try {
+        $wpdb->prepare($wpdb->query("INSERT INTO WP_LIGAER VALUES "."('$name', $length, '$game')"));
+         echo "Følgende liga er blevet oprettet: $name $length $game";
+    } catch (Exception $e) {
+        echo $e->getMessage();
+        $conn->rollback();
+    }
+}
+?>
 get_header();
 global $wpdb;
 ?>
@@ -87,23 +103,6 @@ global $wpdb;
         </table>
     </form>
 </html>
-<?php
-$name = $_POST[liganavn];
-$length = $_POST[ligalenght];
-$game = $_POST[game];
-
-
-if (isset($_POST['submit'])) {
-
-    try {
-        $wpdb->prepare($wpdb->query("INSERT INTO WP_LIGAER VALUES "."('$name', $length, '$game')"));
-         echo "Følgende liga er blevet oprettet: $name $length $game";
-    } catch (Exception $e) {
-        echo $e->getMessage();
-        $conn->rollback();
-    }
-}
-?>
 <?php
 get_sidebar();
 get_footer();

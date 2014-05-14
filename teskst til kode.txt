@@ -1,0 +1,3 @@
+Det vigtigste vi har lavet indtil videre er at vi har fået vores kommunikation med databasen til at virke, 
+sådan at det stadig virker i wordpress hvor vores kode er implementeret som en template. Vi kan derfor oprette nye ligaer
+i vores database, og få vist navnene på de ligaer i en tabel ved brug at wordpresses databaser.
