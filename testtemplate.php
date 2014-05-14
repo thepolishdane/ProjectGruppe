@@ -18,14 +18,18 @@ global $wpdb;
                     Tilmeld Liga
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <?php 
-                        $my_ligaer = $wpdb->get_row("SELECT * FROM wp_ligaer");
-                        echo $my_ligaer->liga_navn ." - ". $my_ligaer->liga_længde ." - ". $my_ligaer->liga_spil;
-                    ?>
-                </td>
-            </tr>
+                       <?php
+                       $results = $wpdb->get_results("SELECT LIGA_NAVN FROM WP_LIGAER");
+                       foreach ($results as $row) {
+                         ?>
+                <tr>
+                    <td>
+                        <?php
+                        echo $row->LIGA_NAVN;
+                        ?>
+                    </td>
+                </tr>
+                <?php } ?>
         </table>
         <table border=1 style="float:left; width:20%; margin-left:1%; margin-top:2%">
             <tr>
@@ -92,7 +96,7 @@ $game = $_POST[game];
 if (isset($_POST['submit'])) {
 
     try {
-        $wpdb->insert('WP_LIGAER', array('liga_navn' => $name, 'liga_længde' => $lenght, 'liga_spil' => $game));
+        $wpdb->prepare($wpdb->query("INSERT INTO WP_LIGAER VALUES "."('$name', $length, '$game')"));
          echo "Følgende liga er blevet oprettet: $name $length $game";
     } catch (Exception $e) {
         echo $e->getMessage();
