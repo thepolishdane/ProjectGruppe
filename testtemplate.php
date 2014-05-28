@@ -34,7 +34,7 @@ global $wpdb;
         <table border=1 style="float:left; width:20%; margin-left:1%; margin-top:2%">
             <tr>
                 <td style="font-weight:bold">
-                    Mine Ligaer
+                    sgkfdshg
                 </td>
             </tr>
             <tr>
@@ -82,6 +82,9 @@ global $wpdb;
                 </td>
                 <td>
                     <input type ="submit" value ="Opret Liga" name="submit">
+                </td>
+                <td>
+                    <a href="<?php echo site_url()?>/testlink.php">Link</a>
                 </td>
             </tr>
         </table>
