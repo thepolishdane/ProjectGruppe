@@ -15,21 +15,47 @@ include('includes/Vis_liga.php');
 include('includes/opret_liga.php');
 */
 
-
 // Runs when plugin is activated
 register_activation_hook( __FILE__, 'KV_page_template');
+
+register_activation_hook( __FILE__, 'KV_install_tabels');
 
 // Runs on plugin deactivation
 register_deactivation_hook( __FILE__, 'KV_plugin_remove' );
 
-// Creates a new page with a template
-function KV_page_template() {
 
+// Laver et nyt tabel hvis det ikke eksisterer, og opdaterer det hvis
+// det findes i forvejen
+function KV_install_tabels(){
+
+	global $wpdb;
+
+	$table_name = $wpdb->prefix . 'liga';
+
+	// checker om det table man vil lave allerede findes
+	if ($wpdb->get_var('SHOW TABLES LIKE ' . $table_name) != $table_name){
+
+		$sql = "CREATE TABLE $table_name (
+			liga_name varchar(255) not null,
+            liga_lenght integer, 
+            liga_game varchar (255),
+            PRIMARY KEY  (liga_name))";
+
+		// dbDelta er en funktion allerede inde i wordpress, som kan
+		// bruges til at lave tables, men den skal først "loades"
+		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+		dbDelta($sql);
+	} // end if
+
+}
+
+// Creates a new page
+function KV_page_template() {
 
 	$title = 'Leagues';
 	$slug = 'League';
 	$author_id = 1;
-
+	
 	// the menu entry...
     delete_option("my_plugin_page_title");
     add_option("my_plugin_page_title", $title, '', 'yes');
@@ -61,7 +87,8 @@ function KV_page_template() {
 			wp_die('Error creating template page');
 
 		} else {
-				update_post_meta($post_id, '_wp_page_template','testtemplate.php');
+
+			update_post_meta($post_id, '_wp_page_template','testtemplate.php');
 		}
 
 	}//end check if
@@ -81,10 +108,11 @@ function KV_page_template() {
     add_option( 'my_plugin_page_id', $post_id );
 }
 
+
 add_action('template_include','KV_uploade_template');
 
 
-// adds the template to the page
+// Runs the template
 function KV_uploade_template ($template){
 
 	$plugindir = dirname(__FILE__);
@@ -119,5 +147,9 @@ function KV_plugin_remove() {
     delete_option("my_plugin_page_id");
 
 }
-
 ?>
+
+
+
+
+
